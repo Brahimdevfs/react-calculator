@@ -1,0 +1,151 @@
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top left, #243b68, transparent 45%),
+    linear-gradient(135deg, #101827, #080c14);
+}
+
+.calculator {
+  width: 100%;
+  max-width: 370px;
+  padding: 24px;
+  border: 1px solid #34435b;
+  border-radius: 30px;
+  background: rgba(20, 29, 45, 0.96);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.brand {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.status {
+  color: #8b9bb5;
+  font-size: 11px;
+}
+
+.screen {
+  min-height: 125px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 12px 4px 24px;
+}
+
+.expression {
+  min-height: 25px;
+  color: #8b9bb5;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.display {
+  max-width: 100%;
+  overflow: hidden;
+  color: #ffffff;
+  font-size: clamp(32px, 8vw, 48px);
+  font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.btn {
+  min-width: 0;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 18px;
+  background: #263348;
+  color: #f7f9ff;
+  font-size: 23px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover {
+  background: #374760;
+}
+
+.btn:active {
+  transform: scale(0.94);
+}
+
+.btn.utility {
+  background: #3b4960;
+  color: #b9c9e4;
+}
+
+.btn.operator {
+  background: #243f70;
+  color: #80b5ff;
+}
+
+.btn.operator:hover {
+  background: #31558f;
+}
+
+.btn.equals {
+  background: #4f8cff;
+  color: white;
+}
+
+.btn.equals:hover {
+  background: #70a3ff;
+}
+
+.footer {
+  margin-top: 22px;
+  text-align: center;
+  color: #7d8ca4;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 420px) {
+  .page {
+    padding: 12px;
+  }
+
+  .calculator {
+    padding: 20px;
+    border-radius: 25px;
+  }
+
+  .buttons {
+    gap: 9px;
+  }
+
+  .btn {
+    border-radius: 15px;
+    font-size: 21px;
+  }
+}
